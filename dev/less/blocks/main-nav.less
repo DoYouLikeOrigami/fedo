@@ -1,0 +1,169 @@
+.main-nav {
+	display: block;
+	position: fixed;
+	box-sizing: border-box;
+
+	width: 392px;
+	height: 100vh;
+
+	padding-top: 25px;
+
+	top: 0;
+	left: 0;
+
+	background-color: @greyColor;
+
+	@media @bigScreen {
+		padding-top: 55px;
+	}
+
+	@media @laptop {
+		width: 30%;
+		padding-left: 15px;
+		padding-right: 15px;
+	}
+
+	@media @mobile {
+		display: none;
+	}
+
+	&__logo {
+		display: block;
+		margin: 0 auto;
+
+		width: 224px;
+
+		text-decoration: none;
+		color: @textColor;
+
+		.small-margin-bottom;
+
+		@media @tablet {
+			width: 100%;
+		}
+
+		&-big {
+			.middle-text();
+			font-family: @ffAB;
+
+			&::before {
+				content: "";
+
+				display: inline-block;
+
+				float: left;
+				margin-right: 15px;
+
+				width: 65px;
+				height: 65px;
+
+				background: url(../img/icons/logo.svg) center;
+				background-size: contain;
+
+				@media @tablet {
+					width: 50px;
+					height: 50px;
+				}
+			}
+		}
+
+		&-small {
+			margin-top: 15px;
+			font-family: @ffA;
+		}
+	}
+
+	&__phone {
+		display: block;
+
+		.small-margin-bottom();
+
+		text-align: center;
+
+		&-tel {
+			display: block;
+
+			.middle-text();
+			color: @textColor;
+
+			margin-bottom: 15px;
+		}
+	}
+
+	&__links {
+		display: block;
+		text-align: center;
+
+		@media @tablet {
+			text-align: left;
+		}
+
+		&-item {
+			display: block;
+			padding: 10px 0;
+
+			color: @textColor;
+
+			transition: .3s;
+
+			@media @bigScreen {
+				padding: 15px 0;
+			}
+
+			@media @tablet {
+				padding: 5px 0;
+			}
+
+			&:hover {
+				background-color: @altTextColor;
+			}
+
+			&--active {
+				font-size: 24px;
+				color: @akcentColor;
+				background-color: @altTextColor;
+
+				@media @bigScreen {
+					font-size: 28px;
+				}
+
+				@media @tablet {
+					font-size: 20px;
+				}
+			}
+		}
+	}
+
+	&__chat {
+		display: block;
+		position: absolute;
+
+		width: 100%;
+
+		bottom: 0;
+		left: 0;
+
+		.middle-text();
+		font-family: @ffB;
+		vertical-align: middle;
+		text-align: center;
+
+		background-color: @akcentColor;
+		color: @altTextColor;
+
+		padding: 15px 0;
+
+		border-radius: @borderRadius @borderRadius 0 0;
+
+		transition: .3s;
+
+		@media @bigScreen {
+			.big-text();
+			padding: 25px 0;
+		}
+
+		&:hover {
+			background-color: @darkAkcentColor;
+		}
+	}
+}

@@ -1,0 +1,234 @@
+.popup.popup--js-call
+	button.popup__close.js--close-popup &#10006;
+	.popup__body
+		p.popup__text
+			| Введите номер&nbsp;телефона, и&nbsp;мы&nbsp;перезвоним в&nbsp;течение&nbsp;5&nbsp;минут!
+		form.popup__form.js--form(method="post" action="./call.php")
+			label
+				input(type="tel" name="tel" placeholder="+7 999 999-99-99" required)
+			input(type="hidden" name="info" value="Заказ звонка")
+			button.btn.btn--akcent(type="submit")
+				| Заказать звонок
+
+.popup.popup--js-video
+	button.popup__close.js--close-popup &#10006;
+	.popup__body
+		iframe.popup__video(src="https://www.youtube.com/embed/MWghCU8Mup0?rel=0&amp;controls=0&amp;showinfo=0" frameborder="0" gesture="media" allow="encrypted-media" allowfullscreen)
+
+.popup.popup--js-img
+	button.popup__close.js--close-popup &#10006;
+	.popup__body
+		p.popup__comment-par Фотография поверхности до обработки
+		img(src="static/img/section-adv/1.jpg" alt="Фото до обработки")
+		p.popup__comment-par Фотография поверхности во время обработки
+		img(src="static/img/section-adv/2.jpg" alt="Фото во время обработки")
+		p.popup__comment-par Фотография поверхности после обработки
+		img(src="static/img/section-adv/3.jpg" alt="Фото после обработки")
+		p.popup__comment-par
+			a.btn.btn--akcent.js--close-popup(href="#") Закрыть окно
+
+.popup.popup--js-consult
+	button.popup__close.js--close-popup &#10006;
+	.popup__body
+		p.popup__text
+			| Выберите удобный способ консультации:
+			br
+			| по телефону или в режиме онлайн-чата
+		.popup__flex
+			a.btn.btn--akcent.js--show-widget(href="#")
+				| В онлайн-чате
+			a.btn.btn--akcent.js--show-call-popup(href="#")
+				| По телефону
+
+.popup.popup--big.popup--js-test-5
+	button.popup__close.js--close-popup &#10006;
+	.popup__body
+		.section-test
+			.section-test__wrap
+				article.section-test__article
+					h4.section-test__title
+						| Испытание FeDo
+
+					.section-test__article-content
+						.section-test__article-img(style="background-image: url(static/img/section-test/img-lift.jpg);")
+						.section-test__article-text
+							h5.section-test__article-title
+								| Предотвращение износа и уменьшение уровня шума подъёмного механизма
+							.section-test__article-descr
+								p
+									| Исследования проводились на зубчатой рейке подъёмного устройства лифта.
+								p
+									| Износ 2 зубов за 29 месяцев эксплуатации с применением немецкого HHS 5000 составил 0,63 мм и 0,47 мм. Уровень шума в кабине достиг 112 Дб.
+							a.btn.btn--gradient(href="https://drive.google.com/file/d/1wNX7Qnhak8B6EcUr4uyk04moJTF0McLz/view?usp=sharing" target="_blank")
+								| Смотреть ксерокопию акта испытаний
+
+					p.section-test__article-result
+						b Результат:
+						| Через 29 месяцев эксплуатации с использованием FeDo износ прекратился, поверхность второго зуба восстановилась на 0,03 мм. Уровень шума в кабине упал до 75 Дб.
+
+					div(style="text-align: center;")
+						a.btn.btn--akcent.js--show-test-6-popup(href="#")
+							| Смотреть следующее испытание
+
+.popup.popup--big.popup--js-test-1
+	button.popup__close.js--close-popup &#10006;
+	.popup__body
+		.section-test
+			.section-test__wrap
+				article.section-test__article
+					h4.section-test__title
+						| Испытание гоночного автомобиля
+
+					.section-test__article-content
+						.section-test__article-img(style="background-image: url(static/img/section-test/img-speed.jpg);")
+						.section-test__article-text
+							h5.section-test__article-title
+								| Увеличение компрессии на 1,5 кг/см2
+							.section-test__article-descr
+								p
+									| Исследования проводились на автомобиле марки ВАЗ с ДВС 2112 объемом 1600см, готовящемся для участия в ралли. ДВС обработали дважды по 35 минут с перерывом по 10 минут до старта.
+
+							a.btn.btn--gradient(href="https://drive.google.com/file/d/1T_ITO35gQ-48TFSDl-2wbTLlGjj5KDht/view?usp=sharing" target="_blank")
+								| Смотреть ксерокопию акта испытаний
+
+					p.section-test__article-result
+						b Результат:
+						| Кроме увеличения компресии; повысилось давление масла; уменьшилась дымность: цвет выхлопа стал светлее; снизилась вибрация ДВС; снизился расход топлива.
+
+					div(style="text-align: center;")
+						a.btn.btn--akcent.js--show-test-2-popup(href="#")
+							| Смотреть следующее испытание
+
+.popup.popup--big.popup--js-test-2
+	button.popup__close.js--close-popup &#10006;
+	.popup__body
+		.section-test
+			.section-test__wrap
+				article.section-test__article
+					h4.section-test__title
+						| Испытания редуктора
+
+					.section-test__article-content
+						.section-test__article-img(style="background-image: url(static/img/section-test/img-reductor.jpg);")
+						.section-test__article-text
+							h5.section-test__article-title
+								| Уменьшение виброскорости и температуры редуктора на 52% и 30&deg;
+							.section-test__article-descr
+								p
+									| Испытывали на стенде петербургского трамвайно-механического завода.
+								p
+									| В течение 36 часов замеряли виброскорость и температуру редуктора колёсной пары вагонной тележки трамвая. Половину времени он работал без нанесения гелевой формы FeDo, вторую половину - с нанесением.
+							a.btn.btn--gradient(href="https://drive.google.com/file/d/1sF6TERABqFlLeZn5iOeEejBphemcbkuW/view?usp=sharing" target="_blank")
+								| Смотреть ксерокопию акта испытаний
+
+					p.section-test__article-result
+						b Результат:
+						| Измерения показали уменьшение виброскорости на 52%, температуры на 30&deg; при применении FeDo. Чем ниже показатели, тем меньше износ механизма.
+
+					div(style="text-align: center;")
+						a.btn.btn--akcent.js--show-test-3-popup(href="#")
+							| Смотреть следующее испытание
+
+.popup.popup--big.popup--js-test-3
+	button.popup__close.js--close-popup &#10006;
+	.popup__body
+		.section-test
+			.section-test__wrap
+				article.section-test__article
+					h4.section-test__title
+						| Испытания мостового крана
+
+					.section-test__article-content
+						.section-test__article-img(style="background-image: url(static/img/section-test/img-kran.jpg);")
+						.section-test__article-text
+							h5.section-test__article-title
+								| Снижение темпа износа колёс мостового крана в 5-8 раз
+							.section-test__article-descr
+								p
+									| Испытывали гребни колёс мостового крана гелиевой формой FeDo. Композицию нанесли на правые колёса, левые оставили необработанными для сравнения.
+								p
+									| Измеряли межбордное расстояние. Результаты сравнили через 2 месяца после нанесения состава.
+							a.btn.btn--gradient(href="https://drive.google.com/file/d/1k_MCu7fF0ChMOekaTxFts5WXUCzbjmti/view?usp=sharing" target="_blank")
+								| Смотреть ксерокопию акта испытаний
+
+					p.section-test__article-result
+						b Результат:
+						| Темпы износа снизились в 5-8 раз. Периодическая обработка колёс составом пропорционально увеличит срок их службы.
+
+					div(style="text-align: center;")
+						a.btn.btn--akcent.js--show-test-4-popup(href="#")
+							| Смотреть следующее испытание
+
+.popup.popup--big.popup--js-test-4
+	button.popup__close.js--close-popup &#10006;
+	.popup__body
+		.section-test
+			.section-test__wrap
+				article.section-test__article
+					h4.section-test__title
+						| Опыт автопарка
+
+					.section-test__article-content
+						.section-test__article-img(style="background-image: url(static/img/section-test/img-auto.jpg);")
+						.section-test__article-text
+							h5.section-test__article-title
+								| Уменьшение числа капитальных ремонтов в автопарке на 25%
+							.section-test__article-descr
+								p
+									| Автопарк начал применение ремонтной композиции ТСК (гелевая форма FeDo, с тем же составом) с целью уменьшить частоту капитальных ремонтов автомобилей.
+								p
+									| Сравнивали по годам: год до этого без использования ТСК, и год с использованием.
+							a.btn.btn--gradient(href="https://drive.google.com/file/d/1_CNWrT874jIGT5uaMsnUWhhOP0nH4t26/view?usp=sharing" target="_blank")
+								| Смотреть ксерокопию акта испытаний
+
+					p.section-test__article-result
+						b Результат:
+						| Уменьшение количества ремонтов на 25%. После чего решили использовать ТСК и в будущем.
+
+					div(style="text-align: center;")
+						a.btn.btn--akcent.js--show-test-5-popup(href="#")
+							| Смотреть следующее испытание
+
+.popup.popup--big.popup--js-test-6
+	button.popup__close.js--close-popup &#10006;
+	.popup__body
+		.section-test
+			.section-test__wrap
+				article.section-test__article
+					h4.section-test__title
+						| Испытание ЖД транспорта
+
+					.section-test__article-content
+						.section-test__article-img(style="background-image: url(static/img/section-test/img-train.jpg);")
+						.section-test__article-text
+							h5.section-test__article-title
+								| Снижение износа более чем в 2 раза
+							.section-test__article-descr
+								p
+									| В течение 2 лет проводилось наблюдение за 6 вагонами с нанесённой смазкой на шарнирные соединения тормозной рычажной передачи тележек и вагона.
+								p
+									| Износ валиков и втулок после 2 лет эксплуатации составил 0,5 - 0,9 мм - в пределах нормы для пробега 450 тыс. км. авил 0,63 мм и 0,47 мм. Уровень шума в кабине достиг 112 Дб. Износ на 6 необработанных вагонах составил свыше 2 мм, из-за чего пришлось провести полную замену валиков и втулок.
+								p
+									| (используемая смазка - гелевое состояние Fe-do, с аналогичным составом и эффектами)
+							a.btn.btn--gradient(href="https://drive.google.com/file/d/12TQd--vI4qQ2RtAJmkmv8zUR85s15fK-/view?usp=sharing" target="_blank")
+								| Смотреть ксерокопию акта испытаний
+
+					p.section-test__article-result
+						b Результат:
+						| Износ уменьшился в 4 раза и не вышел за пределы нормы после двух лет эксплуатации.
+
+					div(style="text-align: center;")
+						a.btn.btn--akcent.js--show-test-1-popup(href="#")
+							| Смотреть следующее испытание
+
+
+.popup.popup--js-mobile-nav
+	button.popup__close.js--close-popup &#10006;
+	.popup__body
+		nav.popup__nav
+			a(href="#main") Главная
+			a(href="#assort") Ассортимент
+			a(href="#pay") Оплата
+			a(href="#get") Доставка
+			a(href="#produce") Производство
+			a(href="#objects") Объекты

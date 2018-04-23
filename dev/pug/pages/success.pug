@@ -1,0 +1,44 @@
+extends ../layouts/base
+
+block seo
+	title Fe-do - Успешный платёж!
+	meta(name="description" content="Ответим в ближайшее время!")
+
+block main-content
+	.main-layout
+		.main-layout__info
+			section.main-screen.main-screen--fullscreen#main
+				.main-screen__wrap
+
+					article.main-screen__content
+						h1.main-screen__title
+							| Ваш платёж прошёл успешно!
+						.main-screen__msg
+							p.main-screen__msg-item
+								| Товар будет доставлен по указанному вами адресу. Давайте будем на связи - подпишитесь на нас в соц сетях:
+
+							ul.section-contacts__socials.section-contacts__socials--in-column
+								li.section-contacts__socials-item
+									a(href="https://vk.com/club150207097" target="_blank")
+										img(src="static/img/icons/social-vk.svg")
+										span vk.com
+
+								li.section-contacts__socials-item
+									a(href="#")
+										img(src="static/img/icons/social-youtube.svg")
+										span youtube.com
+
+								li.section-contacts__socials-item
+									a(href="#")
+										img(src="static/img/icons/social-drive2.svg")
+										span drive2.ru
+
+							a.main-screen__msg-item.main-screen__msg-item--akcent-color.main-screen__msg-item--align-right(href="./")
+								| Вернуться на главную
+
+					.main-screen__img
+						img(src="static/img/main-screen/product.png" alt="Fe-do")
+
+			include ../blocks/popup.pug
+
+		include ../blocks/main-nav--subpage.pug

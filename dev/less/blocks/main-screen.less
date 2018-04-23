@@ -1,0 +1,191 @@
+.main-screen {
+	display: flex;
+	position: relative;
+	box-sizing: border-box;
+
+	flex-direction: column;
+	justify-content: center;
+
+	background: url(../img/main-screen/bg.svg) right center no-repeat;
+	background-size: cover;
+
+	@media @tablet {
+		height: auto;
+		min-height: 0;
+	}
+
+	.section-padding();
+
+	@media @bigScreen {
+		padding: 130px 0;
+	}
+
+	&--fullscreen {
+		min-height: 100vh;
+	}
+
+	&--no-decor {
+		background: none;
+
+		.main-screen__img::after {
+			display: none;
+		}
+
+		@media @tablet {
+			.main-screen__img {
+				display: none;
+			}
+
+			.main-screen__content {
+				margin-top: 0;
+			}
+		}
+	}
+
+	&__wrap {
+		.wrap();
+
+		display: flex;
+		justify-content: space-between;
+		align-items: stretch;
+
+		@media @tablet {
+			flex-wrap: wrap;
+		}
+	}
+
+	&__content {
+		display: block;
+		flex: 0 0 66%;
+
+		@media @tablet {
+			flex: 0 0 100%;
+			margin-top: 30px;
+		}
+	}
+
+	&__title {
+		.section-title();
+		.small-margin-bottom();
+	}
+
+	&__msg {
+		display: flex;
+		flex-direction: column;
+		align-items: flex-start;
+
+		width: 544px;
+
+		@media @laptop {
+			width: 100%;
+		}
+
+		& :last-child {
+			align-self: flex-end;
+		}
+
+		&-item {
+			display: block;
+
+			@media @bigScreen {
+				padding: 36px 40px 36px 80px;
+			}
+
+			padding: 30px 40px 30px 60px;
+
+			@media @tablet {
+				padding: 20px 30px 20px 45px;
+			}
+
+			@media @mobile {
+				padding: 15px 20px 15px 30px;
+			}
+
+			background-color: @greyColor;
+			border-radius: 0 @borderRadius @borderRadius @borderRadius;
+
+			.small-margin-bottom();
+
+			&--akcent-color {
+				background-color: @akcentColor;
+				color: @altTextColor;
+
+				transition: .3s;
+
+				padding: 25px 45px;
+
+				@media @tablet {
+					padding: 20px 40px;
+				}
+
+				@media @mobile {
+					padding: 15px 20px 15px 40px;
+				}
+
+				&:hover {
+					background-color: @darkAkcentColor;
+				}
+			}
+
+			&--align-right {
+				align-self: flex-end;
+				border-radius: @borderRadius 0 @borderRadius @borderRadius;
+			}
+		}
+	}
+
+	&__img {
+		display: block;
+		position: relative;
+		flex: 0 0 33%;
+
+		@media @tablet {
+			flex: 0 0 100%;
+			order: -1;
+		}
+
+		&::after {
+			content: "";
+
+			display: block;
+			position: absolute;
+
+			top: 72%;
+			left: 50%;
+			transform: translateX(-50%);
+
+			width: 100%;
+			max-width: 223px;
+			height: 264px;
+
+			background: url(../img/main-screen/product-mirror.png) center top no-repeat;
+			background-size: contain;
+
+			z-index: 0;
+
+			@media @tablet {
+				display: none;
+			}
+
+			@media @bigScreen {
+				display: none;
+			}
+		}
+
+		img {
+			display: block;
+			position: relative;
+
+			width: 100%;
+			max-width: 223px;
+			margin: 0 auto;
+
+			z-index: 1;
+
+			@media @tablet {
+				max-height: 320px;
+				width: auto;
+			}
+		}
+	}
+}

@@ -1,0 +1,69 @@
+.btn {
+	display: inline-block;
+
+	border: none;
+
+	color: @akcentColor;
+	text-align: center;
+	font-size: 21px;
+	line-height: 22px;
+	font-family: @ffB;
+
+	padding: 25px 50px;
+
+	transition: .3s;
+	cursor: pointer;
+
+	background-color: @greyColor;
+	border-radius: @borderRadius;
+
+	outline: none;
+
+	@media @laptop {
+		font-size: 20px;
+		line-height: 20px;
+		padding: 20px 40px;
+	}
+
+	@media @mobile {
+		font-size: 18px;
+		padding: 18px 35px;
+	}
+
+	&:hover {
+		background-color: @akcentColor;
+		color: @altTextColor;
+	}
+
+	&--dark {
+		background-color: none;
+		border: 2px solid @textColor;
+		color: @textColor;
+
+		.middle-text();
+
+		&:hover {
+			background-color: @textColor;
+			color: @altTextColor;
+		}
+	}
+
+	&--small {
+		padding: 15px 30px;
+	}
+
+	&--akcent {
+		background-color: @akcentColor;
+		color: @altTextColor;
+	}
+
+	&--gradient {
+		background: @blueGradient;
+		color: @altTextColor;
+		border-top-left-radius: 0;
+
+		&:hover {
+			background: @blueFillGradient;
+		}
+	}
+}

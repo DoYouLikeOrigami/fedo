@@ -1,0 +1,132 @@
+extends ../layouts/base
+
+block seo
+	title Fe-do - Покупка
+	meta(name="description" content="Оформление заказа")
+
+block main-content
+	.main-layout
+		.main-layout__info
+			section.main-screen.main-screen--no-decor#main
+				.main-screen__wrap
+
+					article.main-screen__content
+						h1.main-screen__title
+							| Оформление покупки
+
+						form.order-form.js--order-form(method="post" action="./order.php")
+
+							.order-form__step
+								label.order-form__label
+									| Введите количество упаковок Fe-Do
+									input.order-form__input.order-form__input--short(type="number" min="1" max="50" name="amount" value="1" required)
+
+							.order-form__step.js--geo-block
+								p.order-form__step-text Выберите местоположение
+
+								input.order-form__radio.js--geo(type="radio" name="geo" value="СПб" id="i-g-s" required data-geo="spb")
+								label.order-form__label.order-form__label--radio(for="i-g-s")
+									| Санкт-Петербург
+
+								input.order-form__radio.js--geo(type="radio" name="geo" value="Россия и СНГ" id="i-g-r" required data-geo="russia")
+								label.order-form__label.order-form__label--radio(for="i-g-r")
+									| Россия и СНГ
+
+							.order-form__step.js--delivery-block
+								p.order-form__step-text Выберите способ доставки
+
+								input.order-form__radio.js--delivery.js--delivery-spb(type="radio" name="delivery" value="Курьер" disabled id="i-d-k" data-address="courier")
+								label.order-form__label.order-form__label--disabled.order-form__label--radio(for="i-d-k")
+									| Курьером 250 руб
+
+								input.order-form__radio.js--delivery.js--delivery-russia(type="radio" name="delivery" value="Почта" disabled id="i-d-p" data-address="delivery")
+								label.order-form__label.order-form__label--disabled.order-form__label--radio(for="i-d-p")
+									| Почтой 300 руб
+
+								input.order-form__radio.js--delivery.js--delivery-spb(type="radio" name="delivery" value="Самовывоз" disabled id="i-d-s" data-address="selftake")
+								label.order-form__label.order-form__label--disabled.order-form__label--radio(for="i-d-s")
+									| Самовывоз в Санкт-Петербурге
+
+							.order-form__step.order-form__step--hidden.js--address-block.js--address-block-delivery
+								p.order-form__step-text Введите информацию для доставки
+
+								label.order-form__label
+									| Точный адрес
+									input.order-form__input.order-form__input--long(type="text" name="address" placeholder="Город, улица, дом, квартира" disabled)
+								label.order-form__label
+									| Почтовый индекс
+									input.order-form__input.order-form__input--short(type="text" name="address-index" placeholder="000000" disabled)
+
+							.order-form__step.order-form__step--hidden.js--address-block-selftake.js--address-block
+
+								label.order-form__label
+									| Выберите пункт самовывоза
+									select.order-form__input(name="selftake" disabled)
+										option(value="б. Новаторов 67к2") Новаторов б, 67к2
+										option(value="пр-т Народного Ополчения 10") Народного Ополчения пр-т, 10, офис 221Н
+										option(value="Кронштадтская 11") Кронштадтская ул, 11
+										option(value="Алтайская 3") Алтайская ул, 3, офис 10
+										option(value="Московское шоссе 7") Московское шоссе 7, ТЦ "Торговый Двор"
+										option(value="Балканская площадь 5") Балканская площадь 5, ТК "Домострой" секция 22
+										option(value="Обуховской обороны пр-т, 120Б") Обуховской обороны пр-т, 120Б
+										option(value="Полярников ул, 12") Полярников ул, 12
+										option(value="Белы-Куна ул, 20к1") Белы-Куна ул, 20к1, офис 40
+										option(value="Юрия Гагрина пр-кт, 2") Юрия Гагрина пр-кт, 2, ТЦ "Благодатный"
+										option(value="Крыленко ул, 21к1") Крыленко ул, 21к1
+										option(value="Подольская ул, 31") Подольская ул, 31
+										option(value="Лиговский пр-кт, 50к13") Лиговский пр-кт, 50к13, офис 100а
+										option(value="Ефимова ул, 4А") Ефимова ул, 4А, офис 200
+										option(value="Чайковского ул, 34") Чайковского ул, 34
+										option(value="Одоевского ул, 28") Одоевского ул, 28
+										option(value="Плуталова ул, 8А") Плуталова ул, 8А
+										option(value="Энергетиков пр-кт, 9А") Энергетиков пр-кт, 9А
+										option(value="Комиссара Смирнова ул, 5/2 А") Комиссара Смирнова ул, 5/2 А, помещение 11
+										option(value="Торфяная дорога, 2к1 А") Торфяная дорога, 2к1 А
+										option(value="Комендантский пр-кт, 4к2") Комендантский пр-кт, 4к2, секция 001
+										option(value="Коломяжский пр-кт, 28к2") Коломяжский пр-кт, 28к2, офис 14
+										option(value="2ой Муринский пр-кт, 38А") 2ой Муринский пр-кт, 38А,  ТЦ "Клондайк" 1 этаж 66 секция
+										option(value="Гражданский пр-кт, 84") Гражданский пр-кт, 84, офис 15Н
+										option(value="Лиговский пр-кт, 13") Лиговский пр-кт, 13, офис 100Б
+
+							.order-form__step.order-form__step--hidden.js--address-block-courier.js--address-block
+
+								label.order-form__label
+									| Введите точный адрес
+									input.order-form__input(type="text" name="address" placeholder="Город, улица, дом, квартира" disabled)
+
+							.order-form__step.js--pay-block
+								p.order-form__step-text Выберите способ оплаты
+
+								input.order-form__radio.js--pay.js--pay-online(type="radio" name="pay" value="Оплата онлайн" id="i-p-o")
+								label.order-form__label.order-form__label--radio(for="i-p-o")
+									| Оплатить онлайн
+
+								input.order-form__radio.js--pay.js--pay-courier(type="radio" name="pay" value="Оплата курьеру" disabled id="i-p-k")
+								label.order-form__label.order-form__label--disabled.order-form__label--radio(for="i-p-k")
+									| Оплатить курьеру при доставке
+
+								input.order-form__radio.js--pay(type="radio" name="pay" value="Оплата наложенным платежом" id="i-p-n")
+								label.order-form__label.order-form__label--radio(for="i-p-n")
+									| Оплатить наложенным платежом
+
+							.order-form__step
+								p.order-form__step-text Введите контактные данные для связи
+
+								label.order-form__label
+									| Телефон
+									input.order-form__input(type="tel" name="tel" placeholder="+7 999 123-45-67" required)
+								label.order-form__label
+									| E-mail
+									input.order-form__input(type="email" name="email" placeholder="name@mail.ru" required)
+								label.order-form__label
+									| ФИО, на кого оформить заказ
+									input.order-form__input(type="text" name="name" placeholder="Например, Иванов Иван Иванович" required)
+
+							button.btn.btn--akcent.js--submit-btn(type="submit") Оформить покупку
+
+					.main-screen__img
+						img(src="static/img/main-screen/product.png" alt="Fe-do")
+
+			include ../blocks/popup.pug
+
+		include ../blocks/main-nav--subpage.pug

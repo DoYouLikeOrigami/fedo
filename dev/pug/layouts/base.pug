@@ -1,0 +1,29 @@
+doctype html
+html(lang="ru" prefix="og: http://ogp.me/ns#")
+	head
+		meta(charset="UTF-8")
+		meta(name="viewport", content="width=device-width")
+		link(rel="shortcut icon", href="./favicon.ico", type="image/x-icon")
+		link(rel="icon", href="./favicon.ico", type="image/x-icon")
+		script(src="https://api-maps.yandex.ru/2.1/?lang=ru_RU" type="text/javascript")
+		link(rel="stylesheet", href="./static/css/style.min.css")
+		meta(property="og:image" content="http://fe-do.ru/static/img/main-screen/product.png")
+
+		block seo
+
+	body
+		block main-content
+
+		.overlay
+
+		script(type="text/javascript" src="https://vk.com/js/api/openapi.js?150")
+
+		div#vk_community_messages
+
+		script(src="./static/js/main.js")
+
+		script(type="text/javascript")
+			| (function (d, w, c) { (w[c] = w[c] || []).push(function() { try { w.yaCounter48100769 = new Ya.Metrika({ id:48100769, clickmap:true, trackLinks:true, accurateTrackBounce:true, webvisor:true }); } catch(e) { } }); var n = d.getElementsByTagName("script")[0], s = d.createElement("script"), f = function () { n.parentNode.insertBefore(s, n); }; s.type = "text/javascript"; s.async = true; s.src = "https://mc.yandex.ru/metrika/watch.js"; if (w.opera == "[object Opera]") { d.addEventListener("DOMContentLoaded", f, false); } else { f(); } })(document, window, "yandex_metrika_callbacks");
+		noscript
+			div
+				img(src="https://mc.yandex.ru/watch/48100769" style="position:absolute; left:-9999px;" alt="")

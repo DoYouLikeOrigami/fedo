@@ -1,0 +1,32 @@
+.article {
+	display: block;
+	position: relative;
+
+	.section-padding();
+
+	&__wrap {
+		.wrap();
+	}
+
+	&__title {
+		.section-title();
+		.big-margin-bottom;
+	}
+
+	&__body {
+		.big-margin-bottom();
+
+		p {
+			.small-margin-bottom();
+
+			&:last-of-type {
+				margin-bottom: 0;
+			}
+		}
+	}
+
+	&__cta {
+		.middle-text();
+		.small-margin-bottom();
+	}
+}

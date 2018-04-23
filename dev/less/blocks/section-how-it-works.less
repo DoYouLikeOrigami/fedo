@@ -1,0 +1,128 @@
+.section-how-it-works {
+	display: block;
+	position: relative;
+
+	.section-padding();
+
+	&__wrap {
+		.wrap();
+	}
+
+	&__title {
+		.section-title();
+		.big-margin-bottom();
+	}
+
+	&__list {
+		list-style-type: none;
+
+		display: flex;
+		justify-content: space-between;
+
+		@media @tablet {
+			flex-wrap: wrap;
+		}
+	}
+
+	&__item {
+		display: block;
+		position: relative;
+
+		flex: 0 0 19%;
+
+		@media @bigScreen {
+			flex: 0 0 144px;
+		}
+
+		margin-right: 8%;
+
+		text-align: center;
+
+		@media @tablet {
+			flex: 0 0 49%;
+			margin-right: 0;
+
+			.small-margin-bottom();
+
+			&:nth-of-type(3),
+			&:nth-of-type(4) {
+				margin-bottom: 0;
+			}
+		}
+
+		@media @mobile {
+			flex: 0 0 110px;
+		}
+
+		@media @mobileSm {
+			flex: 0 0 50%;
+		}
+
+		&::before {
+			content: "";
+
+			display: block;
+
+			width: 120px;
+			height: 105px;
+
+			@media @bigScreen {
+				width: 144px;
+				height: 118px;
+			}
+
+			@media @tablet {
+				width: 100%;
+				height: 90px;
+			}
+
+			margin: 0 auto;
+			.small-margin-bottom();
+
+			background: url(../img/icons/how-1.svg) center no-repeat;
+			background-size: contain;
+		}
+
+		&:nth-of-type(2)::before {
+			background-image: url(../img/icons/how-2.svg);
+		}
+
+		&:nth-of-type(3)::before {
+			background-image: url(../img/icons/how-3.svg);
+		}
+
+		&:nth-of-type(4)::before {
+			background-image: url(../img/icons/how-4.svg);
+		}
+
+		&::after {
+			content: "";
+
+			display: block;
+			position: absolute;
+
+			top: 52px;
+			right: -33%;
+
+			transform: translate(-50%, -50%);
+
+			width: 33px;
+			height: 33px;
+
+			background: url(../img/icons/how-arrow.svg) center no-repeat;
+			background-size: contain;
+
+			@media @tablet {
+				display: none;
+			}
+		}
+
+		&:last-of-type {
+			margin-right: 0;
+
+			&::after {
+				display: none;
+			}
+		}
+	}
+}
